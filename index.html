@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sackkrat's website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="row">
+
+	<div class="col-2"></div>
+
+	<div class="col-4">
+		<h1>Расчет длины окружности</h1>
+		<form action="" id="calc" method="get">
+			<input type="text" name="radius" placeholder="введите радиус" id="radius" required>
+			<input type="submit" value=">" id="submit">
+	    </form>
+		<div class="clearfix"></div>
+		<h3>Формула</h3>
+		<p>Длинна окружности = 2πR</p>
+		<p>где число π равно: <span id="pi"></span></p>
+	</div>
+
+	<div class="col-4">
+		<div class="result">
+			<h2 class="result_label">Результат</h2>
+		    <div id="result">0</div>
+	    </div>
+	</div>
+
+	<div class="col-2"></div>
+
+</div>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+	<script type="text/babel">
+
+		
+		var PI = Math.PI;	
+
+		
+		document.getElementById('pi').innerHTML = PI;
+			
+		function calculate() {
+			
+			var result;
+		    
+		    var radius = document.getElementById('radius').value;
+
+			radius = Math.abs(radius);
+			
+			result = 2 * PI * radius;
+			
+			result = result.toFixed(2);
+			
+			document.getElementById('result').innerHTML = result;
+			
+			return false;
+		}
+
+		function init() {
+			
+            document.getElementById('calc').onsubmit = calculate;
+		}
+		window.onload = init;
+
+	</script>
+    
+    
+</body>
+</html>

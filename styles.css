@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #3498db;
+}
+
+h1, h2, h3, h4, h5 ,h6{
+  font-weight: 200;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+input[type=submit], input[type=text] {
+  font-size: 18px;
+  line-height: 18px;
+  float: left;
+  border: 0;
+  display: block;
+  margin: 0;
+  height: 40px; 
+}
+
+input[type=text] {
+  padding-left: 1%;
+  width: 102px;
+}
+
+input[type=submit] {
+    background: #2c1d18;
+    color: #fff;
+    padding: 0px 9px;
+    cursor: pointer;
+    border: solid 2px #2c1d18;
+    outline-color: transparent;
+}
+
+input::placeholder {
+  color: #ffff;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.result {
+  margin-top: 56px;
+}
+
+h2.result_label {
+  font-size: 20px;
+  line-height: 0px;
+}
+
+#result {
+  font-size: 48px;
+  color: white;
+}
