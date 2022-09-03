@@ -11,9 +11,23 @@ html, body{
   background-color: #3498db;
 }
 
+@media all and (max-widht: 1200px) {
+  div {
+    width: 960px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  div {
+    width: 320px;
+  }
+}
+    
+
 h1, h2, h3, h4, h5 ,h6{
   font-weight: 200;
 }
+
 
 
 .row::after {
